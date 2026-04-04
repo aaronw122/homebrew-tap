@@ -16,7 +16,13 @@ class Diahistory < Formula
     <<~EOS
       diahistory installed successfully.
 
-      Next step:
+      First run:
+        diahistory
+
+      Then grant Accessibility permission in:
+        System Settings > Privacy & Security > Accessibility
+
+      After permission is enabled, set up background capture:
         diahistory --install
 
       To use a custom archive directory:
