@@ -12,6 +12,18 @@ class Diahistory < Formula
     bin.install ".build/release/diahistory"
   end
 
+  def caveats
+    <<~EOS
+      diahistory installed successfully.
+
+      Next step:
+        diahistory --install
+
+      To use a custom archive directory:
+        diahistory --output ~/MyChats --install
+    EOS
+  end
+
   test do
     assert_match "Capture Dia browser chat conversations via the Accessibility API.",
                  shell_output("#{bin}/diahistory --help")
