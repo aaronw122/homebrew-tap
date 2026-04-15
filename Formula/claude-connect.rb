@@ -15,11 +15,14 @@ class ClaudeConnect < Formula
   end
 
   def install
-    downloaded = Dir["claude-connect-*"].first || Dir["claude-connect"].first
-    bin.install downloaded => "claude-connect"
+    if Hardware::CPU.arm?
+      bin.install "claude-connect-arm64" => "claude-connect"
+    else
+      bin.install "claude-connect-x64" => "claude-connect"
+    end
   end
 
   test do
-    assert_match "Usage: claude-connect", shell_output("#{bin}/claude-connect 2>&1", 0)
+    assert_match "Usage: claude-connect", shell_output("#{bin}/claude-connect --help 2>&1")
   end
 end
