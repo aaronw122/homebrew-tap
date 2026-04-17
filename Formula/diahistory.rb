@@ -9,6 +9,7 @@ class Diahistory < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
+    system "codesign", "--force", "--sign", "-", ".build/release/diahistory"
     bin.install ".build/release/diahistory"
   end
 
