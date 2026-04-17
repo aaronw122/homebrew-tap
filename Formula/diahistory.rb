@@ -1,8 +1,8 @@
 class Diahistory < Formula
   desc "Capture and archive Dia browser conversations as local files"
   homepage "https://github.com/aaronw122/diaHistory"
-  url "https://github.com/aaronw122/diaHistory/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "c0b29be7df648399f66d72bada22be731ff5579ba0dadbf2397a210984f73ab8"
+  url "https://github.com/aaronw122/diaHistory/archive/refs/tags/v0.1.7.tar.gz"
+  sha256 "7186f874cbe96b3f1cbcc3b6328c2f23dcf9d4ec7e90cdb5793afdbebe8133b9"
   license "MIT"
 
   depends_on macos: :sonoma
