@@ -1,17 +1,17 @@
 class ClaudeConnect < Formula
   desc "MCP server that exposes read-only git commands to trusted peers"
   homepage "https://github.com/aaronw122/ClaudeConnect"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/aaronw122/ClaudeConnect/releases/download/v0.4.0/claude-connect-arm64"
-    sha256 "299662eedd6807867fc35255e16c13518f66105d93c67399dd45934e14538b5c"
+    url "https://github.com/aaronw122/ClaudeConnect/releases/download/v0.5.0/claude-connect-arm64"
+    sha256 "40b0fe1f6e5fc8e4f3af5fcc55acd9bf2489b80bff9f4aa06e2955784ac13c14"
   end
 
   on_intel do
-    url "https://github.com/aaronw122/ClaudeConnect/releases/download/v0.4.0/claude-connect-x64"
-    sha256 "55a09d211bc38f99b1506dfeb76ab2b21b08c76366c8be95753fe5f914c9f85e"
+    url "https://github.com/aaronw122/ClaudeConnect/releases/download/v0.5.0/claude-connect-x64"
+    sha256 "dca03d225660da61e1cc8c8cc97e259bee43fa08809a4ef31a25c47bc9ef79d5"
   end
 
   def install
