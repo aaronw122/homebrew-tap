@@ -1,8 +1,8 @@
 class Termcopy < Formula
   desc "Fixes copy-paste from terminal apps by unwrapping TUI-inserted line breaks"
   homepage "https://github.com/aaronw122/termcopy"
-  url "https://github.com/aaronw122/termcopy/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "a1f9178e96bdc0451048f2b4f19cfedb4c51c98b7593d9d29bd38d0e63f3545a"
+  url "https://github.com/aaronw122/termcopy/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "002ee83790cbf6aba0ab100cd8253c3d7f80f0de42da86b73757ad3630eaec26"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
