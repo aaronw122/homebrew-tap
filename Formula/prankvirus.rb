@@ -1,8 +1,8 @@
 class Prankvirus < Formula
   desc "Glitch or shift the whole Mac screen with a hotkey, no Screen Recording needed"
   homepage "https://github.com/aaronw122/prankvirus"
-  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "943315f9bd3bb2c06912afb9e7a8f5136e07a14522ebba0beafc86e1200bb8f3"
+  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "b842bb5bf143803fb14cd4b8dec7a6521725245e5cef6c0569f22dac7c22e2f1"
   license "MIT"
 
   # Deliberately no `depends_on xcode`: XcodeRequirement refuses machines that
@@ -25,19 +25,19 @@ class Prankvirus < Formula
 
   def caveats
     <<~EOS
-      Start it, now and at every login:
+      Check both hotkeys work on this Mac (press each one when asked):
+        prankvirus check
+
+      Start it in the background, now and at every login:
         brew services start prankvirus
 
-      Control-Option-Command-A  glitch: the screen shakes and splits into colour copies
+      Control-Option-Command-G  glitch: the screen shakes and splits into colour copies
       Control-Option-Command-S  shift: the whole screen slides to the right
-      Press the same hotkey again to stop. Each effect also stops after 30 seconds.
+      Press the same hotkey again to stop. Each effect also stops after 30 minutes.
 
-      No permission prompts: it never asks for Screen Recording or Accessibility.
+      No menu bar icon and no permission prompts.
 
-      If AsciiVisor is installed, stop it first; both use Control-Option-Command-A:
-        brew services stop asciivisor
-
-      To remove it, now and at login:
+      To turn it off, now and at login:
         brew services stop prankvirus
 
       Log: #{var}/log/prankvirus.log
