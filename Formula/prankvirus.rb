@@ -1,8 +1,8 @@
 class Prankvirus < Formula
   desc "Glitch or shift the whole Mac screen with a hotkey, no Screen Recording needed"
   homepage "https://github.com/aaronw122/prankvirus"
-  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "1d4548674a057a57405c1519cf0a87f476b166c2265f899c92dee27ed4ab1a3f"
+  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "69e51637bce69ff7318ce107ee9d2913b62631e1e6280252c833a7f51529ad7c"
   license "MIT"
 
   # Deliberately no `depends_on xcode`: XcodeRequirement refuses machines that
