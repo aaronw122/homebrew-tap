@@ -1,8 +1,8 @@
 class Prankvirus < Formula
   desc "Glitch or shift the whole Mac screen with a hotkey, no Screen Recording needed"
   homepage "https://github.com/aaronw122/prankvirus"
-  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "69e51637bce69ff7318ce107ee9d2913b62631e1e6280252c833a7f51529ad7c"
+  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "bec87f7c5a5e72dcc3995816485c52afbd6b0843ab5b8c631cd619f1424e098b"
   license "MIT"
 
   # Deliberately no `depends_on xcode`: XcodeRequirement refuses machines that
@@ -30,7 +30,7 @@ class Prankvirus < Formula
 
       Start it in the background, now and at every login:
         prankvirus start        effects stay on until their hotkey is pressed again
-        prankvirus start -30    each effect turns itself off after 30 minutes
+        prankvirus start -30    each effect turns itself off after 30 minutes (decimals work: -1.5)
 
       Control-Option-Command-G  glitch: the screen shakes and splits into colour copies
       Control-Option-Command-S  shift: the whole screen slides to the right
