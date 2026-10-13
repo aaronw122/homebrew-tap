@@ -1,8 +1,8 @@
 class Prankvirus < Formula
   desc "Glitch or shift the whole Mac screen with a hotkey, no Screen Recording needed"
   homepage "https://github.com/aaronw122/prankvirus"
-  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "b842bb5bf143803fb14cd4b8dec7a6521725245e5cef6c0569f22dac7c22e2f1"
+  url "https://github.com/aaronw122/prankvirus/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "1d4548674a057a57405c1519cf0a87f476b166c2265f899c92dee27ed4ab1a3f"
   license "MIT"
 
   # Deliberately no `depends_on xcode`: XcodeRequirement refuses machines that
@@ -17,7 +17,7 @@ class Prankvirus < Formula
   service do
     run [opt_bin/"prankvirus"]
     # `crashed:` and not `true`: with `keep_alive true` launchd would respawn the
-    # app after the menu's Quit, so the documented off switches would stop working.
+    # app after it exits normally, so `prankvirus stop` could not turn it off.
     keep_alive crashed: true
     log_path var/"log/prankvirus.log"
     error_log_path var/"log/prankvirus.log"
@@ -29,16 +29,17 @@ class Prankvirus < Formula
         prankvirus check
 
       Start it in the background, now and at every login:
-        brew services start prankvirus
+        prankvirus start        effects stay on until their hotkey is pressed again
+        prankvirus start -30    each effect turns itself off after 30 minutes
 
       Control-Option-Command-G  glitch: the screen shakes and splits into colour copies
       Control-Option-Command-S  shift: the whole screen slides to the right
-      Press the same hotkey again to stop. Each effect also stops after 30 minutes.
+      Press the same hotkey again to stop.
 
       No menu bar icon and no permission prompts.
 
       To turn it off, now and at login:
-        brew services stop prankvirus
+        prankvirus stop
 
       Log: #{var}/log/prankvirus.log
     EOS
